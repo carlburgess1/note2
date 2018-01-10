@@ -1,0 +1,39 @@
+1) lambda
+
+script
+------
+from functools import reduce
+product = [10, 3, 1]
+result = reduce(lambda x, y: x * y, product)
+
+print(result)
+
+output
+------
+30
+
+2) one line function
+
+script
+------
+floats = [4.51, 8.87, 7.66, 5.63]
+integers = [int(x) for x in floats ]
+
+print(integers)
+
+output
+------
+[4, 8, 7, 5]
+
+3) enumerate
+
+script
+------
+names = ['Thor Odinson', 'Steve Rogers']
+
+avengers = list(enumerate(names, start = 2))
+print(avengers)
+
+output
+------
+[(2, 'Thor Odinson'), (3, 'Steve Rogers')]
