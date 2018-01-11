@@ -35,6 +35,8 @@ z.shape -- to display matrix format
 
 4) change matrix value :
 
+script
+------
 foo = [0, 5.22, "A", "Tue", 1.2]
 foo[3:5] = ["E", "F"]
 print(foo)
@@ -43,7 +45,19 @@ output
 ------
 [0, 5.22, 'A', 'E', 'F']
 
-5) numpy
+5) change dictionary value
+
+script
+------
+rotation_period = {'earth': 1, 'mercury': 58.8, 'venus': 244}
+rotation_period['venus'] = -244
+print(rotation_period)
+
+output
+------
+{'earth': 1, 'venus': -244, 'mercury': 58.8}
+
+6) numpy
 
 Following is a preview of the DataFrame sales:
 
@@ -65,7 +79,7 @@ script
 import numpy as np
 sales[np.logical_and(sales['product'] == 'A', sales['sold'] < 100)]
 
-6) numpy 2
+7) numpy 2
 
 Following is a preview of the DataFrame products:
 
@@ -87,7 +101,7 @@ script
 ------
 products[products['store'] == 'A']
 
-7) normal dictionary
+8) normal dictionary
 
 SCRIPT
 ------
